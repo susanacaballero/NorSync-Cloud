@@ -8,7 +8,7 @@
 
     // wire up your express app or whatever then:
 
-    loggingDB.connect('mongodb://localhost:27017/loggingDB',  function(err, db) {
+    loggingDB.connect(require('../config').mongoConnectionString,  function(err, db) {
         assert.equal(null, err);
         //assert.ok(db != null);
     });
